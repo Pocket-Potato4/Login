@@ -1,0 +1,65 @@
+
+
+local ScreenGui = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local Login = Instance.new("TextBox")
+local Password = Instance.new("TextBox")
+local TextButton = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+
+Main.Name = "Main"
+Main.Parent = ScreenGui
+Main.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+Main.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Main.Position = UDim2.new(0.303067476, 0, 0.121272355, 0)
+Main.Size = UDim2.new(0, 321, 0, 348)
+Main.Active = true
+Main.Draggable = true
+
+Login.Name = "Login"
+Login.Parent = Main
+Login.BackgroundColor3 = Color3.fromRGB(26, 26, 26)
+Login.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Login.Position = UDim2.new(0.208462805, 0, 0.0825449526, 0)
+Login.Size = UDim2.new(0, 200, 0, 50)
+Login.Font = Enum.Font.SourceSans
+Login.Text = "Username"
+Login.TextColor3 = Color3.fromRGB(255, 255, 255)
+Login.TextScaled = true
+Login.TextSize = 14.000
+Login.TextWrapped = true
+
+Password.Name = "Password"
+Password.Parent = Main
+Password.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+Password.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Password.Position = UDim2.new(0.206478998, 0, 0.336201191, 0)
+Password.Size = UDim2.new(0, 200, 0, 50)
+Password.Font = Enum.Font.SourceSans
+Password.Text = "Password"
+Password.TextColor3 = Color3.fromRGB(255, 255, 255)
+Password.TextScaled = true
+Password.TextSize = 14.000
+Password.TextWrapped = true
+
+TextButton.Parent = Main
+TextButton.BackgroundColor3 = Color3.fromRGB(26, 26, 26)
+TextButton.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.Position = UDim2.new(0.206478968, 0, 0.648179889, 0)
+TextButton.Size = UDim2.new(0, 200, 0, 50)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "Login"
+TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.TextScaled = true
+TextButton.TextSize = 14.000
+TextButton.TextWrapped = true
+TextButton.MouseButton1Down:Connect(function()
+	if Login.text == "tester" and Password.text == "Nuggets" then
+        wait(.2)
+		loadstring(game:HttpGet(("https://raw.githubusercontent.com/Pocket-Potato4/test/main/tester"),true))()
+		Main.Visible = false
+	end
+end)
